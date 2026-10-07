@@ -1,0 +1,72 @@
+/*
+ * casino.css
+ * Casino-style look for the Card 24 game: a green felt card table,
+ * gold buttons, and casino-style fonts.
+ */
+
+/* The whole window: green felt card table, lighter in the middle like a lit table */
+.root {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 75%, #1f7a3a, #0b3d1c);
+    -fx-font-family: "Georgia";
+}
+
+/* "Enter An Expression:" label: gold lettering with a shadow */
+.label {
+    -fx-text-fill: #f5d76e;
+    -fx-font-family: "Georgia";
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+    -fx-effect: dropshadow(gaussian, black, 3, 0.5, 1, 1);
+}
+
+/* Buttons: rounded gold casino chips */
+.button {
+    -fx-background-color: linear-gradient(#ffe27a, #d4a017);
+    -fx-background-radius: 20;
+    -fx-border-color: #7a5c00;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-text-fill: #3b0a0a;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 6, 0.3, 2, 2);
+}
+
+/* Buttons light up when the mouse is over them */
+.button:hover {
+    -fx-background-color: linear-gradient(#fff0a8, #e6b422);
+}
+
+/* Buttons look pushed in while being clicked */
+.button:pressed {
+    -fx-background-color: linear-gradient(#d4a017, #b8860b);
+}
+
+/* Text boxes: dark green with a gold border; a monospace font keeps expressions easy to read */
+.text-field {
+    -fx-background-color: #0a2914;
+    -fx-text-fill: white;
+    -fx-border-color: #d4a017;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 14px;
+}
+
+/* The text box being typed in gets a brighter gold border */
+.text-field:focused {
+    -fx-border-color: #ffe27a;
+}
+
+/* The solution box shows its answer in gold */
+#solution_Box {
+    -fx-text-fill: #ffe27a;
+}
+
+/* Cards: a shadow underneath so they look like they're lying on the table */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.3, 3, 3);
+}

@@ -25,7 +25,7 @@ public class HelloController {
     private static final String[] NAMES = {"", "ace", "2", "3", "4", "5", "6", "7",
             "8", "9", "10", "jack", "queen", "king"};
 
-    // The four card slots from game-view.fxml (names must match the fx:id values)
+    // The four card slots from game-view.fxml
     @FXML
     private ImageView card1_Image;
     @FXML
@@ -39,12 +39,11 @@ public class HelloController {
     @FXML
     private TextField user_Expression_Textbox;
 
-    // Read-only text box next to the Find A Solution button, where the solution
-    // (or "No solution possible") is shown
+    // Read-only text box next to the Find A Solution button, where the solution is shown
     @FXML
     private TextField solution_Box;
 
-    // Values of the four cards currently shown (will be used by the Verify button)
+    // Values of the four cards currently shown
     private final int[] cardValues = new int[4];
 
     /**

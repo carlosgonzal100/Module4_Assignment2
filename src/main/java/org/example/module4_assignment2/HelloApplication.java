@@ -71,6 +71,15 @@ import java.io.IOException;
  * with at all. if there isnt a solution, display "No solution possible". A succesful verification
  * and a refresh resets this text field as well."
  *
+ * (5) used this prompt with CLAUDE to add a CSS sheet. This CSS sheet will change the
+ * button shapes, change background colors, text colros, text fonts, and the looks of the app
+ * to make the whole thing look like a casino game. I also told it ti change the title of the
+ * window as it still said "Hello!". A simple prompt was given to get the app to
+ * look like a casino game. The prompt was:
+ *
+ * "change the window title to Card 24, and use a CS styling sheet to change up
+ * the fonts of the game, make it look casino like"
+ *
  */
 public class HelloApplication extends Application {
     @Override
@@ -92,7 +101,10 @@ public class HelloApplication extends Application {
                 scene.heightProperty().divide(designHeight)));
         group.scaleYProperty().bind(group.scaleXProperty());
 
-        stage.setTitle("24 Card Game");
+        // Casino-style look (green felt, gold buttons, fonts) from casino.css
+        scene.getStylesheets().add(HelloApplication.class.getResource("casino.css").toExternalForm());
+
+        stage.setTitle("Card 24");
         stage.setScene(scene);
         stage.show();
     }
