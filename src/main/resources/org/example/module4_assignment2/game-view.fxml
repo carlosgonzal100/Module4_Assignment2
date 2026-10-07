@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="find_Solution_Button" mnemonicParsing="false" prefHeight="41.0" prefWidth="194.0" text="Find A Solution">
+               <HBox.margin>
+                  <Insets left="10.0" top="17.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="solution_Box" prefHeight="26.0" prefWidth="216.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="25.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="refresh_Button" mnemonicParsing="false" prefHeight="42.0" prefWidth="120.0" text="Refresh">
+               <HBox.margin>
+                  <Insets left="20.0" top="17.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="74.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="enter_Expression_Label" alignment="CENTER" prefHeight="44.0" prefWidth="191.0" text="Enter An Expression:" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_Expression_Textbox" prefHeight="26.0" prefWidth="233.0">
+               <HBox.margin>
+                  <Insets top="27.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="Verify_Button" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" text="Verify">
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="card1_Image" fitHeight="186.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="card2_Image" fitHeight="186.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="card3_Image" fitHeight="186.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="card4_Image" fitHeight="186.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
