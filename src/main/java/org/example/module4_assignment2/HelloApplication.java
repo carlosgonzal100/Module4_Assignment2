@@ -13,7 +13,6 @@ import java.io.IOException;
 
 /**
  * Note:
- *
  * got my playing card images here:
  * https://opengameart.org/content/playing-cards-vector-png
  */
@@ -57,6 +56,21 @@ import java.io.IOException;
  * "help me with the verify button. The verify button checks if the users input amounts to 24, by using the 4 cards
  * given on the display and by using multiplication, addition, subtraction or division. The user can also use
  * parenthesis to group numbers and operators and they can only use each number once in the expression."
+ *
+ * (4) used this prompt to help be implement the find a solution button. the button when
+ * pressed shows the solution to the problem using the 4 cards, addition, subtraction,
+ * multiplication, division and parethesis. it is shown in the text field next to the button.
+ * the result gave me a class called card24Solver.java that has a method called findSolution()
+ * that takes in the 4 card values and returns a string with the solution. it also connected
+ * this method to the find a solution button. The prompt was:
+ *
+ * "i need help with the find a solution button. this button must find a solution to reaching
+ * the value 24 by using the 4 displayed cards and their value, parethesis, multiplication,
+ * addition, subtraction and division. if there is a solution, display the solution to the
+ * problem in the solution textfield next to the find a solution button, which cant be tampered
+ * with at all. if there isnt a solution, display "No solution possible". A succesful verification
+ * and a refresh resets this text field as well."
+ *
  */
 public class HelloApplication extends Application {
     @Override

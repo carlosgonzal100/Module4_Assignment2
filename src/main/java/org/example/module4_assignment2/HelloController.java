@@ -39,6 +39,11 @@ public class HelloController {
     @FXML
     private TextField user_Expression_Textbox;
 
+    // Read-only text box next to the Find A Solution button, where the solution
+    // (or "No solution possible") is shown
+    @FXML
+    private TextField solution_Box;
+
     // Values of the four cards currently shown (will be used by the Verify button)
     private final int[] cardValues = new int[4];
 
@@ -52,12 +57,27 @@ public class HelloController {
 
     /**
      * Called when the Refresh button is clicked. Deals a new set of four cards
-     * and clears the expression text box.
+     * and clears the expression and solution text boxes.
      */
     @FXML
     private void onRefreshClick() {
         dealCards();
         user_Expression_Textbox.clear();
+        solution_Box.clear();
+    }
+
+    /**
+     * Called when the Find A Solution button is clicked. Shows a solution for the
+     * current four cards, or "No solution possible" if there isn't one.
+     */
+    @FXML
+    private void onFindSolutionClick() {
+        String solution = Card24Solver.findSolution(cardValues);
+        if (solution != null) {
+            solution_Box.setText(solution);
+        } else {
+            solution_Box.setText("No solution possible");
+        }
     }
 
     /**
@@ -94,9 +114,8 @@ public class HelloController {
             return;
         }
 
-        // Check 3: the result must be 24. A small tolerance is allowed because division
-        // like 8/3 can't be stored exactly (e.g. 8/(3-8/3) gives 23.99999999999999).
-        if (Math.abs(result - 24) < 0.0001) {
+        // Check 3: the result must be 24 (same check the solver uses)
+        if (Card24Solver.isTwentyFour(result)) {
             showResult(Alert.AlertType.INFORMATION, "Correct!", "Correct! " + expression + " = 24");
             // After the dialog is closed, start a new round with new cards and an empty text box
             onRefreshClick();

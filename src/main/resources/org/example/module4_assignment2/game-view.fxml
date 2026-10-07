@@ -14,12 +14,12 @@
    <top>
       <HBox prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="find_Solution_Button" mnemonicParsing="false" prefHeight="41.0" prefWidth="194.0" text="Find A Solution">
+            <Button fx:id="find_Solution_Button" mnemonicParsing="false" onAction="#onFindSolutionClick" prefHeight="41.0" prefWidth="194.0" text="Find A Solution">
                <HBox.margin>
                   <Insets left="10.0" top="17.0" />
                </HBox.margin>
             </Button>
-            <TextField fx:id="solution_Box" prefHeight="26.0" prefWidth="216.0">
+            <TextField fx:id="solution_Box" editable="false" prefHeight="26.0" prefWidth="216.0">
                <HBox.margin>
                   <Insets left="10.0" top="25.0" />
                </HBox.margin>
